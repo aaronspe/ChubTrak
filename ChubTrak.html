@@ -1,0 +1,79 @@
+<head>
+  <title>ChubTrak</title>
+</head>
+<body>
+  <h1>ChubTrak</h1>
+  <div class="mainpage">
+    {{> weighin}}
+  </div>
+</body>
+
+
+<template name="weighin">
+
+<table class="table table-bordered table-hover table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Weight</th>
+      <th>BodyFat</th>
+    </tr>
+  </thead>
+  
+ 
+  <tbody>
+    
+    {{#each dailyLog}}
+    
+    <tr>
+      <td class="logdata {{selectedClass}}">{{date}}</td>
+      <td class="logdata {{selectedClass}}">{{weight}}</td>
+      <td class="logdata {{selectedClass}}">{{bodyfat}}</td>
+    </tr>
+      
+    {{/each}}
+  
+  </tbody>
+   </table>
+  <input type="button" class="remove" value="Remove Data">
+
+  
+  <div class="Totals">
+  
+ <table class="table table-bordered" width=400>
+  <thead>
+    <tr>
+    <th>Weight Loss</th>
+      <th>BodyFat Loss</th>
+      
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+    <th>{{showTotalWeightChange}} lbs</th>
+        <th>{{showTotalWeightChange}}</th>
+        </tr>
+    </tbody>
+  
+  </table>
+  </div>
+  
+  
+  {{> addWeighInForm}}
+  
+  
+  
+  
+  
+</template>
+
+<template name="addWeighInForm">
+
+  <form>
+    <input type="text" name="todaysWeight">
+    <input type="text" name="todaysBodyFat">
+    <input type="submit" name="Weigh In">
+  </form>
+
+  
+</template>

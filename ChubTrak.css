@@ -1,0 +1,35 @@
+/* CSS declarations go here */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.mainpage {
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: 95%;
+}
+
+div.Totals {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+
+
+/* Highlights the selected row */
+
+
+
+
+.selected{
+  background-color: lightblue;
+  
+}
+
+tr, th, td {
+  text-align: center;
+}
